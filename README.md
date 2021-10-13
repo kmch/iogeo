@@ -7,4 +7,4 @@ Managing file I/O for Earth Science.
 - generic API for new file formats.
 
 ## Formats
-sgy, su, vtr, ttr, bin, mmp, csv, json, geo, pgy
+`sgy`, `su`, `vtr`, `ttr`, `bin`, `mmp`, `csv`, `json`, `geo`, `pgy`
