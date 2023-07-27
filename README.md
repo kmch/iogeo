@@ -1,10 +1,10 @@
 # I:globe_with_meridians:geo
-Managing file I/O for Earth Science.
+Managing file I/O for Earth science.
 
 ## Features
-- fast I/O with sequential access to binary files,
-- most common file formats used in FWI community,
-- generic API for new file formats.
+- most common file formats,
+- generic framework for adding new file formats,
+- fast I/O with sequential access to binary files.
 
 ## Formats
 `sgy`, `su`, `vtr`, `ttr`, `bin`, `mmp`, `csv`, `json`, `geo`, `pgy`
