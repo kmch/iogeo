@@ -2,7 +2,7 @@ import numpy as np
 import os
 import sys
 import unittest
-from mmp import read_mmp, save_mmp
+from ..mmp import read_mmp, save_mmp
 
 class TestMMPFunctions(unittest.TestCase):
 

@@ -1,0 +1,31 @@
+package:
+  name: iogeo
+  version: 1.0
+
+source:
+  git_url: https://github.com/kmch/iogeo
+  git_rev: v1.0  # Tag or commit hash for the version you want to package
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - python
+    - setuptools
+    - pip
+    - sphinx
+
+  run:
+    - python
+    - numpy
+    - autologging
+
+about:
+  home: https://github.com/kmch/iogeo
+  license: GNU General Public License v3.0
+  summary: Managing file I/O for Earth science.
+
+extra:
+  recipe-maintainers:
+    - kmch
