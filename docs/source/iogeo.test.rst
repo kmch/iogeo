@@ -1,6 +1,11 @@
 iogeo.test package
 ==================
 
+.. automodule:: iogeo.test
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 Submodules
 ----------
 
@@ -12,10 +17,10 @@ iogeo.test.test\_mmp module
    :undoc-members:
    :show-inheritance:
 
-Module contents
----------------
+iogeo.test.test\_spatial module
+-------------------------------
 
-.. automodule:: iogeo.test
+.. automodule:: iogeo.test.test_spatial
    :members:
    :undoc-members:
    :show-inheritance:

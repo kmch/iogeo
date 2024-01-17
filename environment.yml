@@ -5,11 +5,14 @@ channels:
 dependencies:
 
   - python=3.11
-  
+
 # STAPLES
   - autologging
+  - ipykernel # python -m ipykernel install --user --name=iogeo
+  - matplotlib
   - numpy
   - pandas
+  - pytest
   - sphinx
   - sphinx-rtd-theme
 
@@ -17,6 +20,8 @@ dependencies:
   # - geopandas
   - geojson # used by pysheds
   - xarray # numpy arrays endowed with metadata, good e.g. for netCDF4 files
+  - rioxarray # xarray extension to open/reproject/clip 
+  # GDAL-readable raster data such as GeoTIFFs using rasterio 
   # - bottleneck # speeds up NaN-skipping and rolling window aggregations by a large factor
   # - dask
       # Xarray integrates with Dask to support parallel computations

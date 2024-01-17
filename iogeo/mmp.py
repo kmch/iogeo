@@ -23,13 +23,13 @@ from autologging import logged, traced
 
 @traced
 @logged
-def read_mmp(fname, shape, mmp_dtype=np.float32, **kwargs):
+def read_mmp(file_path, shape, mmp_dtype=np.float32, **kwargs):
   """
   Read a memory-mapped file.
 
   Parameters
   ----------
-  fname : str
+  file_path : str
     The file name, including the '.mmp' extension.
 
   shape : tuple
@@ -49,15 +49,14 @@ def read_mmp(fname, shape, mmp_dtype=np.float32, **kwargs):
     If the specified file does not exist.
 
   """
-  if not os.path.exists(fname):
-    raise FileNotFoundError(fname)
+  if not os.path.exists(file_path):
+    raise FileNotFoundError(file_path)
   
-  fA = np.memmap(fname, dtype=mmp_dtype, shape=shape)
+  fA = np.memmap(file_path, dtype=mmp_dtype, shape=shape)
   return fA
-
 @traced
 @logged
-def save_mmp(A, fname, mmp_dtype=np.float32, **kwargs):
+def save_mmp(A, file_path, mmp_dtype=np.float32, **kwargs):
   """
   Save an array to a memory-mapped file.
   
@@ -66,7 +65,7 @@ def save_mmp(A, fname, mmp_dtype=np.float32, **kwargs):
   A : array_like
     The array to be saved to the memory-mapped file.
 
-  fname : str
+  file_path : str
     The file name, including the '.mmp' extension.
 
   mmp_dtype : data-type, optional (default is np.float32)
@@ -78,8 +77,8 @@ def save_mmp(A, fname, mmp_dtype=np.float32, **kwargs):
     The memory-mapped array.
 
   """
-  with open(fname, 'wb') as file:
+  with open(file_path, 'wb') as file:
     A.tofile(file)
 
-  fA = np.memmap(fname, dtype=mmp_dtype, mode='r+', shape=A.shape)
+  fA = np.memmap(file_path, dtype=mmp_dtype, mode='r+', shape=A.shape)
   return fA
