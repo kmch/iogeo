@@ -1,6 +1,9 @@
 # I:globe_with_meridians:geo
 Managing file I/O for Earth science.
 
+## Installation
+`conda install kmch::iogeo`
+
 ## Features
 - most common file formats,
 - generic framework for adding new file formats,
