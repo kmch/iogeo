@@ -1,4 +1,4 @@
-# I:globe_with_meridians:geo
+# I🌐geo
 Managing file I/O for Earth science.
 
 ## Installation
